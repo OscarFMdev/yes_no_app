@@ -9,7 +9,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: AppTheme().theme(),
+      theme: AppTheme( selectedColor: 3).theme(),
+      debugShowCheckedModeBanner: false,
       title: 'Yes No App',
       home: Scaffold(
         appBar: AppBar(
