@@ -8,7 +8,7 @@ class ChatScreen extends StatelessWidget { // When it's a Screen it returns a Sc
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Iron Man 🤖'),
+        title: const Text('Iron Man 🤖'),
         centerTitle: false, // Android doesn't center the title by default
         leading: const Padding(
           padding: EdgeInsets.all(3.0),
@@ -34,7 +34,7 @@ class _ChatView extends StatelessWidget {
           children: [
             Expanded(child: ListView.builder(
               itemCount: 100, // To generate 100 elements
-              itemBuilder: (cotext, index) { // context is _ChatView, index is generated index
+              itemBuilder: (context, index) { // context is _ChatView, index is generated index
               return const MyMessageBubble();
             })),
             const Text('World')
