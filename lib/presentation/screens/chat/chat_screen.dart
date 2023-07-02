@@ -37,7 +37,6 @@ class _ChatView extends StatelessWidget {
               itemBuilder: (context, index) { // context is _ChatView, index is generated index
               return const MyMessageBubble();
             })),
-            const Text('World')
           ],
         ),
       ),
