@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yes_no_app/presentation/widgets/chat/his_message_bubble.dart';
 import 'package:yes_no_app/presentation/widgets/chat/my_message_bubble.dart';
 
 class ChatScreen extends StatelessWidget { // When it's a Screen it returns a Scaffold
@@ -35,7 +36,9 @@ class _ChatView extends StatelessWidget {
             Expanded(child: ListView.builder(
               itemCount: 100, // To generate 100 elements
               itemBuilder: (context, index) { // context is _ChatView, index is generated index
-              return const MyMessageBubble();
+              return( index % 2 == 0 )
+              ? const MyMessageBubble()
+              : const HisMessageBubble();
             })),
           ],
         ),
